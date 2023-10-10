@@ -197,7 +197,7 @@ class ComputeLoss:
 
         na, nt = self.na, targets.shape[0]  # number of anchors (na=3), number of targets (nt) in this batch
         tcls, tbox, indices, anch = [], [], [], []
-        gain = torch.ones(7, device=targets.device)  # normalized to gridspace gain [1,1,1,1,1,1,1]
+        gain = torch.ones(7, device=targets.device).long()  # normalized to gridspace gain [1,1,1,1,1,1,1]
 
         #ai is the anchor index (na,nt)
         #torch.arange(na).float().view(na,1)

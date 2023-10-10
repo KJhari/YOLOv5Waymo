@@ -1,3 +1,46 @@
+Logging results to runs/train/yolov5scoco6
+Starting training for 10 epochs...
+
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+       8/9     1.84G   0.07464   0.04631  0.005055       121       640: 100%|█| 8055/8055 [3:46:50<00:00,  
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|█| 504/504 [09
+                 all      16109     197865      0.811      0.282      0.333      0.167
+
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+       9/9     1.84G   0.07407   0.04594  0.004898       178       640: 100%|█| 8055/8055 [3:45:12<00:00,  
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|█| 504/504 [09
+                 all      16109     197865      0.818      0.282      0.338       0.17
+
+2 epochs completed in 7.864 hours.
+Optimizer stripped from runs/train/yolov5scoco6/weights/last.pt, 3.9MB
+Optimizer stripped from runs/train/yolov5scoco6/weights/best.pt, 3.9MB
+
+Validating runs/train/yolov5scoco6/weights/best.pt...
+Fusing layers... 
+Model Summary: 213 layers, 1764577 parameters, 0 gradients
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|█| 504/504 [09
+                 all      16109     197865       0.82      0.282      0.338       0.17
+             vehicle      16109     151072      0.737      0.471      0.544      0.304
+          pedestrian      16109      45459      0.721      0.374      0.444      0.196
+             cyclist      16109       1334          1          0     0.0259     0.0104
+Results saved to runs/train/yolov5scoco6
+
+
+
+
+waymococo YOLOv5s initial training cmd
+**********************************************
+
+ python train.py --data waymococo.yaml --epochs 10 --weights '' --cfg yolov5n.yaml  --batch-size 16 --save-period 1  
+
+
+
+resume Training:   
+****************************************************************************
+python train.py --data waymococo.yaml --epochs 10 --weights /home/016587116/Assignments/yolov5Waymo/yolov5/runs/train/yolov5scoco6/weights/epoch7.pt  --batch-size 16 --save-period 1  --resume
+
+
+
 ## <div align="center">My added Readme in this Repo</div>
 
 <details open>
